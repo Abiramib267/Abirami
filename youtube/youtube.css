@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    scroll-padding: 19px;
+ 
+}
+
+
+.navbar {
+    display: flex;
+    padding: 10px;
+    
+}
+
+.nav-btn {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: top;
+    margin-top: 10px;
+    align-items: center;
+    margin-left: 400px;
+   
+}
+
+.logo input {
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.video {
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 70px;
+    justify-items: center;
+    padding-top: 10px;
+}
+
+.video img {
+    padding: 10px;
+}
+.bar{
+ margin-left:0px;
+}
