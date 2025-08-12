@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #2e3141;
+    color: #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 5em 0;
+    background-color: #5d3f8a;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/img/audience.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+header .content {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 4em;
+    margin: 0;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 1em auto 2em;
+}
+
+.button {
+    display: inline-block;
+    background-color: #6a4c9c;
+    color: #fff;
+    padding: 1em 2em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #7b59b5;
+}
+
+.section {
+    padding: 4em 20px; 
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+
+.section p {
+    max-width: 700px;
+    margin: 0 auto 2em;
+    color: #aaa;
+}
+
+.two-column-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.two-column-section .item {
+    flex: 1;
+    min-width: 300px;
+    background-color: #3e4152;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.two-column-section .item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.two-column-section .item .text-overlay {
+    margin-top: 1em;
+    color: #fff;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #444;
+    max-width: 80%;
+    margin: 2em auto;
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.video-item {
+    background-color: #3e4152;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: left;
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+}
+
+.video-item video { 
+    width: 230px;
+    height: 200px;
+    display: block;
+    border-radius: 5px;
+}
+
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-thumbnail::after {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+}
+
+.three-column-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 4em 20px 2em;
+    background-color: #222533;
+}
+
+.three-column-footer .column {
+    text-align: left;
+}
+
+.three-column-footer .column h3 {
+    color: #fff;
+    margin-top: 0;
+}
+
+.three-column-footer .column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.three-column-footer .column li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #444;
+}
+
+.three-column-footer .column li:last-child {
+    border-bottom: none;
+}
+
+.three-column-footer .column a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.social-icons {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 1.5em;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
+
+.quote-box {
+    background-color: #5d3f8a;
+    color: #fff;
+    padding: 2em;
+    border-radius: 5px;
+    text-align: left;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quote-box p {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    .two-column-section,
+    .video-gallery,
+    .three-column-footer {
+    grid-template-columns: 1fr;
+    }
+}
