@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else</title>
+</head>
+<body>
+    
+ <script>
+    // indian to doller
+ let indian=parseInt(prompt("enter the rupee"));
+ let dollar= 84.57/indian
+ document.write("indian is: "+indian+"<br>");
+ document.write("indian to dollar: "+dollar+"<br><br>")
+
+//  doller to indian
+ let dolla=parseInt(prompt("enter the dollar"));
+ let india= dolla*87.5
+document.write("dollar is: "+dollar+"<br>");
+document.write("dollar to indian: "+indian+"<br><br>");
+//  meter to kilometer
+let meter=parseInt(prompt("enter the meter"));
+let m=78/1000
+document.write("meter is:"+m+"<br><br>");
+// celsius to fahrenheit
+let F=parseInt(prompt("enter the fahrenheit"));
+let celsius=(F-32*(5/9));
+document.write(" celsius is: "+celsius+"<br><br>");
+//degree to radian
+let degree = 180;
+let radian = (Math.PI / 180) * degree;
+document.write(degree + " = " + radian.toFixed(4) + " rad<br>");
+// radian to degree
+let rad = 3.1416;
+let deg = rad * (180 / Math.PI);
+document.write(rad + " rad = " + deg.toFixed(2) + "<br><br>");
+// leap year or not
+let year = 2024; 
+if (year % 4 == 0) {
+    document.write(year + " is a Leap Year<br>");
+} else {
+    document.write(year + " is NOT a Leap Year<br>");
+}
+// FizzBuzz
+let num = 15;
+if (num % 3 == 0 && num % 5 == 0) {
+    document.write(num + " = FizzBuzz<br>");
+} else if (num % 3 == 0) {
+    document.write(num + " = Fizz<br>");
+} else if (num % 5 == 0) {
+    document.write(num + " = Buzz<br>");
+} else {
+    document.write(num + " is not FizzBuzz<br>");
+}
+// odd or even
+let n = 12;
+if (n % 2 == 0) {
+    document.write(n + " is Even<br>");
+} else {
+    document.write(n + " is Odd<br>");
+}
+// discount
+let price = 200;
+let qty = 6;
+let total = price * qty;
+
+if (total > 1000) {
+    total = total - (total * 0.1); 
+}
+document.write("Total cost = " + total + "<br><br>");
+//  Passed or Failed
+let mark = 45;
+if (mark > 50) {
+    document.write("Student Passed<br>");
+} else {
+    document.write("Student Failed<br>");
+}
+
+</script>
+</body>
+</html>
