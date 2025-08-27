@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested</title>
+</head>
+
+<body>
+  <script>
+    // Days
+    let days = parseInt(prompt("Enter the days"))
+    switch (days) {
+      case 1:
+        document.write(days + "Sunday", "<br>")
+        break;
+      case 2:
+        document.write(days + "Monday", "<br>")
+        break;
+      case 3:
+        document.write(days + "Tuesday", "<br>")
+        break;
+      case 4:
+        document.write(days + "Wednesday", "<br>")
+        break;
+      case 5:
+        document.write(days + "Thursday", "<br>")
+        break;
+      case 6:
+        document.write(days + "Friday", "<br>")
+        break;
+      case 7:
+        document.write(days + "Satuday", "<br>")
+        break;
+      default:
+        document.write("Enter the 1 to 7 days", "<br>")
+    }
+    //  Months
+    let month = parseInt(prompt("Enter the month"))
+    switch (month) {
+      case 1:
+        document.write(month + "January", "<br>")
+        break;
+      case 2:
+        document.write(month + "February", "<br>")
+        break;
+      case 3:
+        document.write(month + "March", "<br>")
+        break;
+      case 4:
+        document.write(month + "April", "<br>")
+        break;
+      case 5:
+        document.write(month + "May", "<br>")
+        break;
+      case 6:
+        document.write(month + "June", "<br>")
+        break;
+      case 7:
+        document.write(month + "July", "<br>")
+        break;
+      case 8:
+        document.write(month + "August", "<br>")
+        break;
+      case 9:
+        document.write(month + "September", "<br>")
+        break;
+      case 10:
+        document.write(month + "October", "<br>")
+        break;
+      case 11:
+        document.write(month + "November", "<br>")
+        break;
+      case 12:
+        document.write(month + "December", "<br>")
+        break;
+      default:
+        document.write("Enter the 1 to 12 months", "<br>")
+    }
+
+    // A,B,C
+    let A = parseInt(prompt("Enter A:"));
+    let B = parseInt(prompt("Enter B:"));
+    let C = parseInt(prompt("Enter choice (1=Add, 2=Sub, 3=Mul, 4=Div):"));
+
+    switch (C) {
+      case 1:
+        document.write("Addition = " + (A + B), "<br>");
+        break;
+      case 2:
+        document.write("Subtraction = " + (A - B), "<br>");
+        break;
+      case 3:
+        document.write("Multiplication = " + (A * B), "<br>");
+        break;
+      case 4:
+        document.write("Division = " + (A / B), "<br>");
+        break;
+      default: document.write("Invalid Choice", "<br>");
+    }
+
+    // username & email
+    let UserName = "abirami";
+    let Email = "abirami@gmail.com";
+    let name = prompt("Enter the username:");
+    let email = prompt("Enter the email:");
+    if (name ==UserName) {
+      if (email ==Email) {
+        document.write(" Valid Username and Email", "<br>");
+      } else {
+        document.write(" Invalid Email", "<br>");
+      }
+    } else {
+      document.write(" Invalid Username", "<br>");
+    }
+
+
+    // year & sem
+    let year = parseInt(prompt("Enter Year (1-4):"));
+    let sem = parseInt(prompt("Enter Semester (1-2):"));
+
+    if (year == 1 && sem == 1) {
+      document.write("Subjects: English, Maths, Digital princpal, Linux, C Programming", "<br>");
+    }
+    else if (year == 1 && sem == 2) {
+      document.write("Subjects: Data Structures, OOPS, DBMS, Digital Logic, Statistics", "<br>");
+    }
+    else if (year == 2 && sem == 1) {
+      document.write("Subjects: Java, Operating System, Computer Networks,Aptitude, Software Engg", "<br>");
+    }
+    else if (year == 2 && sem == 2) {
+      document.write("Subjects: Web Tech, AI Basics, RDBMS, Probability, Photoshop", "<br>");
+    }
+    else {
+      document.write("Subjects not defined for given year & semester", "<br>");
+    }
+
+    // Interviwe Round
+    let aptitude = parseInt(prompt("Enter Aptitude Marks:"));
+    if (aptitude >= 85) {
+      document.write("Selected in Aptitude", "<br>");
+      let GD = parseInt(prompt("Enter GD Marks:"));
+      if (GD >= 90) {
+        document.write("Selected in GD", "<br>");
+      }
+      else {
+        document.write("Not Selected in GD round", "<br>");
+      }
+      let Technical = parseInt(prompt("Enter Technical Marks:"));
+      if (Technical >= 80) {
+        document.write("Selected in Technical", "<br>");
+      }
+      else {
+        document.write("Not Selected in Technical round", "<br>");
+      }
+      let HR = parseInt(prompt("Enter HR Marks:"));
+      if (HR >= 95) {
+        document.write("Selected in HR" , "<br>" );
+      }
+      else {
+        document.write("Not Selected in HR round" ,"<br>");
+      }
+    }
+    else {
+      document.write("Not Selected in Aptitude round , <br> ");
+    }
+
+    // shapes
+
+    let length = parseInt(prompt("Enter Length:"));
+    let breadth = parseInt(prompt("Enter Breadth:"));
+    if (length == breadth) {
+      document.write("It is a Square", "<br>");
+    } else {
+      document.write("It is not a Square", "<br>");
+    }
+
+  </Script>
+</body>
+
+</html>
