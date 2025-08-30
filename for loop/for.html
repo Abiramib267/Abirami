@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+
+<body>
+    <script>
+        // the first 10 natural number
+        for (let i = 1; i <= 10; i++) {
+            document.write(i, "<br>")
+        }
+
+        // sum of the first 10 natural number
+        s = 1;
+        for (let i = 1; i <= 10; i++) {
+            s = s + i;
+        }
+        document.write("sum of the number:" + s, "<br>")
+
+        // n terms of natural number
+        let n = 20;
+        let sum = 1;
+        for (let i = 1; i <= n; i++) {
+            sum = sum + i;
+        }
+        document.write(" n terms of natural number:" + sum, "<br>")
+
+        // sum and average
+
+        let a = 0;
+        for (let i = 1; i <= 10; i++) {
+            a = a + i;
+        }
+        document.write("sum: " + a, "<br>")
+        document.write("average: " + a/10, "<br><br>")
+
+        // cube of the first 10 natural number
+
+        for (let i = 1; i <= 10; i++) {
+            document.write(i ** 3, "<br>")
+        }
+
+        // the multiplication table
+        let m = 5;
+        for (let i = 1; i <= 10; i++) {
+            document.write(m + " x " + i + " = " + (m * i) + "<br>");
+        }
+        
+        // factorial number
+        let fact = 1;
+        for (let i = 7; i>= 1; i--) {
+            fact *= i;
+        }
+        document.write("Factorial of 7 = " + fact);
+    </script>
+</body>
+
+</html>
