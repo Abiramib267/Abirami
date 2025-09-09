@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematical</title>
+</head>
+
+<body>
+  <script>
+    // 1. Reverse a number
+    let num1 = parseInt(prompt("Enter a Reverse number:"));
+    let rev = 0;
+    let temp1 = num1;
+    while (temp1 > 0) {
+      let digit = temp1 % 10;          
+      rev = rev * 10 + digit;         
+      temp1 = Math.floor(temp1 / 10);  
+    }
+    document.write("Reverse of " + num1 + " = " + rev ,"<br>");
+
+    // 2. Palindrome check
+    let num2 = parseInt(prompt("Enter a  Palindrome  number:"));
+    let temp2 = num2, rev1 = 0;
+    while (temp2 > 0) {
+      let digit = temp2 % 10;
+      rev1 = rev1 * 10 + digit;
+      temp2 = Math.floor(temp2 / 10);
+    }
+    if (num2 === rev1) {
+      document.write(num2 + " is Palindrome <br><br>");
+    } else {
+      document.write(num2 + " is NOT Palindrome <br><br>");
+    }
+    // 3. Armstrong check
+    let num3 = parseInt(prompt("Enter an Armstrong number:"));
+    let sum3 = 0, len3 = num3.toString().length;
+    let temp3 = num3;
+    while (temp3 > 0) {
+      let d = temp3 % 10;
+      sum3 += Math.pow(d, len3);
+      temp3 = Math.floor(temp3 / 10);
+    }
+    if (sum3 === num3) {
+      document.write(num3 + " is Armstrong <br><br>");
+    } else {
+      document.write(num3 + " is NOT Armstrong <br><br>");
+    }
+
+    // 4. Sum of digits
+    let num4 = parseInt(prompt("Enter a number for Sum of digits:"));
+    let sum = 0, temp4 = num4;
+    while (temp1 > 0) {
+      let d = temp1 % 10;         
+      sum += d;                   
+      temp1 = Math.floor(temp1 / 10); 
+    }
+    document.write("Sum of digits of " + num4 + " = " + sum + "<br><br>");
+
+    // 5. Product of digits
+    let num5 = parseInt(prompt("Enter a number for Product of digits:"));
+    let product = 1, temp5 = num5;
+    while (temp2 > 0) {
+      let d = temp2 % 10;            
+      product *= d;                   
+      temp2 = Math.floor(temp2 / 10); 
+    }
+    document.write("Product of digits of " + num5 + " = " + product + "<br><br>");
+
+
+    // 6. Spy number
+    let n =  parseInt(prompt("Enter a Spy number"));
+    let p = 1;
+    let s = 0;
+    while (n > 0) {
+      let digit = n % 10; 
+      p *= digit;
+      s += digit;
+      n = Math.floor(n / 10);
+    }
+    if (s === p) {
+      document.write(n + " is Spy Number <br><br>");
+    } else {
+      document.write(n + " is NOT Spy Number <br><br>");
+    }
+
+    // 7. Special 2-digit number
+    let num7 = parseInt(prompt("Enter a Special Number:"));
+    if (num7 >= 10 && num7 <= 99) {
+      let d1 = Math.floor(num7 / 10);
+      let d2 = num7 % 10;
+      let sum2 = d1 + d2;
+      let prod2 = d1 * d2;
+      if (sum2 + prod2 === num7) {
+        document.write(num7 + " is Special 2-digit Number <br><br>");
+      } else {
+        document.write(num7 + " is NOT Special 2-digit Number <br><br>");
+      }
+    } else {
+      document.write("Please enter only a 2-digit number <br><br>");
+    }
+
+    // 8. Niven  number
+    let num6 = parseInt(prompt("Enter a Niven Number:"));
+    let sum6 = 0, temp6 = num6;
+    while (temp6 > 0) {
+      sum6 += temp6 % 10;
+      temp6 = Math.floor(temp6 / 10);
+    }
+    if (num6 % sum6 === 0) {
+      document.write(num6 + " is Niven  Number <br><br>");
+    } else {
+      document.write(num6 + " is NOT Niven Number <br><br>");
+    }
+
+    // 9. Neon number
+    let num8 = parseInt(prompt("Enter a number to check Neon Number:"));
+    let sq = num8 * num8;
+    let sumSq = 0;
+    while (sq > 0) {
+      sumSq += sq % 10;
+      sq = Math.floor(sq / 10);
+    }
+    if (sumSq === num8) {
+      document.write(num8 + " is Neon Number <br><br>");
+    } else {
+      document.write(num8 + " is NOT Neon Number");
+    }
+
+  </script>
+</body>
+
+</html>
