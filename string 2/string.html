@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string function</title>
+</head>
+
+<body>
+    <script> 
+        var sent = "I am Abi , I am from madurai , I am pursing Bsc Computer science"
+        //indexOf()
+        document.write("indexOf <br>");
+        document.write("found am : " + sent.indexOf("am"), "<br>");
+        document.write("found am from 5th postion : " + sent.indexOf("am ,5"), "<br>");
+        document.write("<br>")
+
+        // lastIndexOf
+        document.write("lastIndexOf <br>");
+        document.write("found am : " + sent.lastIndexOf("am"), "<br>");
+        document.write("<br>")
+
+        // search()
+        document.write("search <br>");
+        document.write("found am : " + sent.search("am"), "<br>");
+        document.write("Not found from am : " + sent.search("Am"), "<br>");
+        document.write("<br>")
+
+        // match()
+        document.write("match <br>");
+        document.write("found am : " + sent.match("am"), "<br>");
+        document.write("Not found from am : " + sent.match("Am"), "<br>");
+        document.write("<br>")
+
+        // includes()
+        document.write("include <br>")
+        document.write("found am : " + sent.includes("am"), "<br>")
+        document.write("<br>")
+
+        // replace()
+        document.write("replace : " + sent.replace("am", "i'm"), "<br>")
+        document.write("<br>")
+
+        // replaceAll()
+        document.write("replaceAll : " + sent.replaceAll("am", "i'm"), "<br>")
+        document.write("<br>")
+
+        // slice()
+        document.write("slice : " + sent.slice(5,8), "<br>")
+        document.write("<br>")
+
+        // split()
+        document.write("split : " + sent.split("",8), "<br>")
+        document.write("<br>")
+
+        // substring()
+        document.write("substring : " + sent.substring(10), "<br>")
+        document.write("<br>")
+
+        // substr()
+        document.write("substr : " + sent.substr(5,16), "<br>")
+        document.write("<br>")
+    </script>
+</body>
+
+</html>
