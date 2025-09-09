@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 5 multiplication
+        for (let i = 1; i <= 10; i++) {
+            document.write("5 x " + i + " = " + (5 * i) + "<br>");
+        }
+
+        // even or odd
+        let num = 10;
+        if (num % 2 == 0) {
+            document.write(num + "is a even", "<br>");
+        }
+        else {
+            document.write(num + "is a odd", "<br>");
+        }
+
+        // sum of 1 to 100
+        let sum = 0
+        for (i = 1; i <= 100; i++) {
+            sum = sum + i;
+        }
+        document.write("sum:" + sum, "<br>");
+
+        // days
+        let days = 2;
+        switch (days) {
+            case 1:
+                document.write(days + "Sunday", "<br>")
+                break;
+            case 2:
+                document.write(days + "Monday", "<br>")
+                break;
+            case 3:
+                document.write(days + "Tuesday", "<br>")
+                break;
+            case 4:
+                document.write(days + "Wednesday", "<br>")
+                break;
+            case 5:
+                document.write(days + "Thursday", "<br>")
+                break;
+            case 6:
+                document.write(days + "Friday", "<br>")
+                break;
+            case 7:
+                document.write(days + "Satuday", "<br>")
+                break;
+            default:
+                document.write("invalid day", "<br>")
+        }
+    </script>
+</body>
+
+</html>
