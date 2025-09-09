@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 1. Prime number check
+    let n = parseInt(prompt("Enter a Prime number "));
+    let count = 0;
+    for (let i = 1; i <= n; i++) {
+      if (n % i === 0) {
+        count++;
+      }
+    }
+    if (count === 2) {
+      document.write(n + " is a Prime number<br>");
+    } else {
+      document.write(n + " is not a Prime number<br>");
+    }
+
+    document.write("<hr>");
+
+    // 2.Fibonacci series
+    let terms = parseInt(prompt("Enter a Fibonacci series"));
+    let a = 0, b = 1;
+    document.write("Fibonacci series:<br>");
+    for (let i = 1; i <= terms; i++) {
+      document.write(a + "<br>");
+      let next = a + b;
+      a = b;
+      b = next;
+    }
+
+    document.write("<hr>");
+
+    // 3. Perfect number 
+    let numCheck = parseInt(prompt("Enter a  Perfect number"));
+    let sumDiv = 0;
+    for (let i = 1; i < numCheck; i++) {
+      if (numCheck % i === 0) {
+        sumDiv += i;
+      }
+    }
+    if (sumDiv === numCheck) {
+      document.write(numCheck + " is a Perfect number<br>");
+    } else {
+      document.write(numCheck + " is not a Perfect number<br>");
+    }
+
+    document.write("<hr>");
+
+    // 4. Composite number check
+    let p = parseInt(prompt("Enter a Composite number"));
+    let divisorCount = 0;
+    for (let i = 1; i <= p; i++) {
+      if (p % i === 0) {
+        divisorCount++;
+      }
+    }
+    if (divisorCount > 2) {
+      document.write(p + " is a Composite number<br>");
+    } else {
+      document.write(p + " is not a Composite number<br>");
+    }
+
+    document.write("<hr>");
+
+    // 5. Prime numbers from 1 to 100
+    document.write("Prime numbers:<br>");
+    for (let j = 2; j <= 100; j++) {
+      let c = 0;
+      for (let i = 1; i <= j; i++) {
+        if (j % i === 0) {
+          c++;
+        }
+      }
+      if (c === 2) {
+        document.write(j + " ");
+      }
+    }
+
+    document.write("<hr>");
+
+    // 6. Composite numbers from 1 to 100
+    document.write("Composite numbers:<br>");
+    for (let j = 4; j <= 100; j++) {  
+      let c = 0;
+      for (let i = 1; i <= j; i++) {
+        if (j % i === 0) {
+          c++;
+        }
+      }
+      if (c > 2) {
+        document.write(j + " ");
+      }
+    }
+
+    document.write("<hr>");
+
+    // 7. Abundant number check
+    let num = parseInt(prompt("Enter a Abundant number"));
+    let sum = 0;
+    for (let i = 1; i < num; i++) {
+      if (num % i === 0) {
+        sum += i;
+      }
+    }
+    if (sum > num) {
+      document.write(num + " is an Abundant number<br>");
+    } else {
+      document.write(num + " is not an Abundant number<br>");
+    }
+
+  </script>
+</body>
+
+</html>
