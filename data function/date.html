@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date function</title>
+</head>
+
+<body>
+    <script>
+        // 1. Get the Current Date
+        var currentDate = new Date();
+        document.write("Current Date: " + currentDate,"<br><hr>");
+
+        //2. Get the Month Number
+        var currentDate = new Date(); 
+        var monthNumber = currentDate.getMonth()+1;
+        document.write("Month Number: " + monthNumber,"<br><hr>");
+
+        // 3. Get the Month Name from Current Date
+        var currentDate = new Date();
+        var monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+        var monthName = monthNames[currentDate.getMonth()];
+        document.write("Month Name: " + monthName,"<br><hr>");
+
+        // 4. Get the Day Name from Current Date
+        var currentDate = new Date();
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var dayName = dayNames[currentDate.getDay()];
+        document.write("Day Name: " + dayName,"<br><hr>");
+
+    </script>
+</body>
+
+</html>

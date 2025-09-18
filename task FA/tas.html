@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function
+        // 1.check the prime number
+        function prime(n) {
+            if (n % 2 == 0) {
+                document.write("1. it is  a prime : ", n + "<br>");
+            }
+            else {
+                document.write("1. it is not a prime : ", n + "<br>");
+            }
+        }
+        prime(2);
+
+        // 2.take string and return it in reverse
+        function reverse(str) {
+            let rev = "";
+            for (let i = str.length - 1; i >= 0; i--)
+                rev += str[i];
+            return rev;
+        }
+        document.write("2.reverse is: " + reverse("hello"), "<br>");
+
+        // 3.two num and return the greater common divisor
+        function greater(a, b) {
+            if (a > b) {
+                return a;
+            } else {
+                return b;
+            }
+        }
+        document.write("3.greater number: " + greater(80, 170), "<br>");
+
+        // 4.check if a string is a palindrome
+        function palindrome(str) {
+            let rev = "";
+            for (let i = str.length - 1; i >= 0; i--)
+                rev += str[i];
+            return rev;
+        }
+        document.write("4.palindrome is: " + palindrome("madam"), "<br><hr>");
+
+        // Array 
+        // 1. largest num in array
+        let arr1 = [50, 37, 87];
+        let largest = arr1[0];
+        for (let i = 1; i < arr1.length; i++) {
+            if (arr1[i] > largest) largest = arr1[i];
+        }
+        document.write("1. Largest number: " + largest, "<br>");
+
+        // 2.remove duplicate num in array
+        let arr2 = [50, 30, 20, 10, 50, 20];
+        let array = []
+        for (let i = 0; i < arr2.length; i++) {
+            if (array.indexOf(arr2[i]) == -1) {
+                array.push(arr2[i]);
+            }
+        }
+        document.write("2. Array without duplicates: " + array.join(", "), "<br>");
+
+        //3.even num in array
+        let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        even = []
+        for (let i = 0; i < num.length; i++) {
+            if (num[i] % 2 == 0) {
+                document.write("3. It is even num:" + num[i], "<br>")
+            }
+        }
+
+        // 4. the sum of all num in array 
+        let arr3 = [10, 20, 40]
+        let sum = 0;
+        for (let i = 0; i < arr3.length; i++) {
+            sum += arr3[i];
+        }
+        document.write("4. Sum of numbers: " + sum, "<br>");
+
+        // 5.index of a given element in array 
+        let arr4 = [19, 34, 45, 67, 89];
+        for (let i = 0; i < arr4.length; i++) {
+            document.write("5. Index " + i ,": " + arr4[i] , "<br>");
+        }
+
+    
+
+
+    </script>
+</body>
+
+</html>

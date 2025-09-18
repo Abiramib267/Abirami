@@ -1,0 +1,149 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function</title>
+</head>
+
+<body>
+    <script>
+
+        let myColor = ["Red", "Green", "White", "Black"];
+
+        // 1. first element of an array
+        document.write("1. First element: " + myColor[0] + "<br>");
+
+        // 2. last element of an array
+        document.write("2. Last element: " + myColor[myColor.length - 1] + "<br>");
+
+        // 3. Join all elements into a string
+        let joinedWithComma = "";
+        for (let i = 0; i < myColor.length; i++) {
+            joinedWithComma += myColor[i];
+            if (i !== myColor.length - 1) {
+                  joinedWithComma += ",";
+            }
+        }
+        document.write("3. Joined with commas: " + joinedWithComma + "<br>");
+
+        let joinedWithPlus = "";
+        for (let i = 0; i < myColor.length; i++) {
+            joinedWithPlus += myColor[i];
+            if (i !== myColor.length - 1) {
+                joinedWithPlus += "+";
+            }
+        }
+        document.write("3. Joined with '+': " + joinedWithPlus + "<br>");
+
+        // 4. Sort the items of the array 
+        let sortedArray = myColor.sort();
+        document.write("4. Sorted array: " + sortedArray.join(",") + "<br>");
+
+        // 5. Find the sum of an array of elements
+        let nums = [1, 2, 3, 4, 5];
+        let sum = 0;
+        for (let i = 0; i < nums.length; i++) {
+            sum += nums[i];
+        }
+        document.write("5. Sum of array: " + sum , "<br>");
+
+        // 6.sum and product of an array of integers
+        let product = 1;
+        for (let i = 0; i < nums.length; i++) {
+            product *= nums[i];
+        }
+        document.write("6. Sum: " + sum + ", Product: " + product + "<br>");
+
+        // 7. Find leap years in a given array
+        let years = [2000, 2001, 2004, 1900, 2020];
+        let leapYears = "";
+        for (let i = 0; i < years.length; i++) {
+            let year = years[i];
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                if (leapYears !== "") {
+                    leapYears += ",";
+                }
+                leapYears += year;
+            }
+        }
+        document.write("7. Leap years: " + leapYears + "<br>");
+
+        // 8. Merge two arrays and remove duplicates
+        let arr1 = ["a", "b", "c"];
+        let arr2 = ["b", "c", "d"];
+        let merged = [];
+        for (let i = 0; i < arr1.length; i++) {
+            merged.push(arr1[i]);
+        }
+        for (let i = 0; i < arr2.length; i++) {
+            let exists = false;
+            for (let j = 0; j < merged.length; j++) {
+                if (arr2[i] === merged[j]) {
+                    exists = true;
+                    break;
+                }
+            }
+            if (!exists) {
+                merged.push(arr2[i]);
+            }
+        }
+        document.write("8. Merged without duplicates: " + merged.join(",") + "<br>");
+
+        // 9. Remove a specific element from an array
+        let elementToRemove = "White";
+        let newArray = [];
+        for (let i = 0; i < myColor.length; i++) {
+            if (myColor[i] !== elementToRemove) {
+                newArray.push(myColor[i]);
+            }
+        }
+        document.write("9. After removing '" + elementToRemove + "': " + newArray.join(",") + "<br>");
+
+        // 10. Find if the array contains a specific element
+        let searchElement = "Green";
+        let found = false;
+        for (let i = 0; i < myColor.length; i++) {
+            if (myColor[i] === searchElement) {
+                found = true;
+                break;
+            }
+        }
+        document.write("10. Contains '" + searchElement + "': " + found + "<br>");
+
+        // 11. even and odd numbers from an array
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let evenCount = 0;
+        let oddCount = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 === 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+        document.write("11. Even count: " + evenCount + ", Odd count: " + oddCount + "<br>");
+
+        // 12. prime numbers from an array
+        let primeCount = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            let n = numbers[i];
+            if (n > 1) {
+                let isPrime = true;
+                for (let j = 2; j <= Math.sqrt(n); j++) {
+                    if (n % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    primeCount++;
+                }
+            }
+        }
+        document.write("12. Prime count: " + primeCount + "<br>");
+    </script>
+</body>
+
+</html>

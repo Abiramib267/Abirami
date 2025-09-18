@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>funtion</title>
+</head>
+
+<body>
+  <script>
+
+    // 1. Function to add two numbers
+    function add(a, b) {
+      return a + b;
+    }
+    document.write("Add :" + add(5, 7) + "<br>");
+
+    // 2. Function to check if number is even or odd
+    function isEven(num) {
+      if (num % 2 === 0) {
+        return "Even";
+      } else {
+        return "Odd";
+      }
+    }
+    document.write("6 is :" + isEven(6) + "<br>");
+
+    // 3. Function that takes array and returns sum
+    function sumArray(arr) {
+      let total = 0;
+      for (let i = 0; i < arr.length; i++) total += arr[i];
+      return total;
+    }
+    document.write("Sum is:" + sumArray([1, 2, 3]) + "<br>");
+
+    // 4. Function that reverses a string
+    function reverseString(str) {
+      let rev = "";
+      for (let i = str.length - 1; i >= 0; i--) rev += str[i];
+      return rev;
+    }
+    document.write("Reverse of hello is: " + reverseString("hello") + "<br>");
+
+    // 5. Function to check if a word is palindrome
+    function isPalindrome(word) {
+      let rev = reverseString(word);
+      if (word === rev) {
+        return "Yes";
+      } else {
+        return "No";
+      }
+    }
+    document.write("It is palindrome: " + isPalindrome("madam") + "<br>");
+
+    // 6. Function to find factorial of a number
+    function factorial(n) {
+      if (n === 0 || n === 1) return 1;
+      let fact = 1;
+      for (let i = 2; i <= n; i++) fact *= i;
+      return fact;
+    }
+    document.write("Factorial of 5: " + factorial(5) + "<br>");
+
+    // 7. Function to calculate area of a circle (πr²)
+    function circleArea(r) {
+      return Math.PI * r * r;
+    }
+    document.write("Area of circle with radius : " + circleArea(3) + "<br>");
+
+    // 8. Function to find largest number in an array
+    function largestNum(arr) {
+      let max = arr[0];
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) max = arr[i];
+      }
+      return max;
+    }
+    document.write("Largest is :" + largestNum([4, 5, 1]) + "<br>");
+
+    // 9. Function to count vowels in a string
+    function countVowels(str) {
+      let count = 0;
+      let vowels = "aeiouAEIOU";
+      for (let i = 0; i < str.length; i++) {
+        if (vowels.indexOf(str[i]) !== -1) count++;
+      }
+      return count;
+    }
+    document.write("vowels in Hello World: " + countVowels("Hello World") + "<br>");
+
+    // 10. Function to return greater of two numbers
+    function greater(a, b) {
+      if (a > b) {
+        return a;
+      } else {
+        return b;
+      }
+    }
+    document.write("Greater number: " + greater(8, 12) + "<br>");
+
+  </script>
+</body>
+
+</html>
