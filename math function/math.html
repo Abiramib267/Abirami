@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math function</title>
+</head>
+
+<body>
+    <script>
+        let a = 26;
+        let b = 56.78;
+        let c = 76.9;
+
+        //1. random integer
+        document.write("random: " + Math.random(a), "<br><hr>");
+
+        //2. lower value
+        document.write("lower value: " + Math.min(a, b, c), "<br><hr>");
+
+        // 3.round number
+        document.write("round: " + Math.round(b), "<br><hr>");
+
+        //4.decimal place 
+        document.write("decimal value: " + Math.trunc(c), "<br><hr>");
+        // 5.math function
+        // 1. Area of circle
+        var radius = 5;
+        var area = Math.PI * radius * radius;
+        document.write("Area of circle: " + area, "<br><hr>");
+
+        // 2. circumference of circle
+        var radius = 7;
+        var circumference = 2 * Math.PI * radius;
+        document.write("Circumference of the circle: " + circumference, "<br><hr>");
+
+        // 3.surface volume
+        var radius = 4;
+        var height = 10;
+        var surfaceArea = 2 * Math.PI * radius * height + 2 * Math.PI * radius ** 2;
+        document.write("Surface area of cylinder: " + surfaceArea, "<br><hr>");
+
+        // 4.Area of cylinder
+        var radius = 5;
+        var height = 10;
+        var surfaceArea =  Math.PI * radius * 2 * height;
+        document.write("area of cylinder: " + surfaceArea, "<br><hr>");
+
+        // 5.surface volume
+        var radius = 8;
+        var surfaceArea = 4 * Math.PI * radius ** 2;
+        document.write("Surface area of cylinder: " + surfaceArea, "<br><hr>");
+
+        // 6.Area of a sphere
+        var radius = 6;
+        var area = 4 * Math.PI * radius * radius;
+        document.write("Surface area of sphere: " + area, "<br><hr>");
+
+        // 7.distance between two point
+        var x1 = 3, y1 = 4;
+        var x2 = 7, y2 = 8;
+        var dx = x2 - x1;
+        var dy = y2 - y1;
+        var distance = Math.sqrt(dx * dx + dy * dy);
+        document.write("Distance between two points: " + distance, "<br><hr>");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // double each num
+        let num=[1,2,3,4,5]
+        let double= num.map(function(num){
+            return num*2});
+            document.write("1.Double each num : "+double ,"<br>");
+          
+        // change to Upper case
+        let names=["sita","abi","rose"];
+        let UpperNames=names.map((name) =>{
+        return name.toUpperCase();})
+        document.write("2.Upper Case : "+UpperNames,"<br>");
+
+        // even num
+        let number=[1,2,3,4,5,6]
+        let even = number.filter((num) =>{
+            return num % 2 ===0 });
+            document.write("3.Even number: "+even,"<br>");
+
+        // short name
+        let name=["sita","abi","rose","raj","ram","anu"];
+        let shortName=name.filter((name) =>{
+              return name.length<=3 });
+              document.write("4.Short names : "+shortName,"<br>");
+
+        // sum all num
+        let num1=[1,2,3,4,5,6,7,8,9]
+        let sum= num1.reduce((tot,item) =>{
+            return tot+item },1);
+            document.write("5.Sum all num : "+sum);
+    </script>
+</body>
+</html>

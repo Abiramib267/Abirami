@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event handling</title>
+    <style>
+        div { 
+             height: 200px;
+             width: 200px;
+             background-color:aliceblue;
+             overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 1.onclick
+        function add(x,y){
+        let z=x+y;
+        document.write("Addition the value is: ",+z);
+        }
+        function sub(x,y){
+        let z=x-y;
+        document.write("Subtraction the value is: ",+z);
+        }
+        function mult(x,y){
+        let z=x*y;
+        document.write("Multiplication the value is: ",+z);
+        }
+        function div(x,y){
+        let z=x/y;
+        document.write("Divsion the value is: ",+z);
+        }
+
+         // selected
+          function selected() {
+            alert("selected")
+        }
+          // scrolling
+          function scrolling() {
+            alert("scrolling")
+        }
+
+    </script>
+
+1.  <button onclick="add(22,45)">Addition</button>
+    <button onclick="sub(12,23)">Subtraction</button>
+    <button onclick="mult(20,15)">Multiplication</button>
+    <button onclick="div(90,45)">Divsion</button><hr>
+
+     <!-- 2. double clik -->
+2.  <button ondblclick="add(42,151)">Add</button>
+    <button ondblclick="sub(120,230)">Sub</button><hr>
+
+        <!-- 4.selected -->
+4.  <input type="text" value="Hello Abi" onselect="selected()"><hr>
+
+    <!-- 3. scrolling -->
+3.  <div onscroll="scrolling()">
+  <p> Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit. 
+    Perferendis similique iure ut voluptate possimus<br> hic officiis
+     dolorum laudantium rem doloremque voluptas nihil<br> itaque voluptates
+      illum, voluptatum maxime<br> aperiam veniam eos.
+      Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit. 
+      Perferendis similique iure ut voluptate possimus<br> hic officiis
+       dolorum laudantium rem doloremque voluptas nihil<br> itaque voluptates
+        illum, voluptatum maxime<br> aperiam veniam eos.</p>
+
+
+</body>
+</html>
