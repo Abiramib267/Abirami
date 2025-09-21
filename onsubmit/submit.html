@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fun() {
+            var name = document.getElementById("uname".value);
+            var pass = document.getElementById("pass".value);
+            var user = document.getElementById("user".value);
+            var agree = document.getElementById("agree".checked);
+
+            if (name.length <= 3 || name.length >= 50) {
+                alert("please give valid name");
+            }
+            else if (pass.length <= 3 || pass.length >= 20) {
+                alert("please give valid password");
+            }
+            else if (user == "select") {
+                alert("please choose the member");
+            }
+            else if (!agree) {
+                alert("please check Terms and conditions")
+            }
+            else {
+                alert("validation success")
+            }
+        }
+    </script>
+    <form action="" onsubmit="return fun()">
+    <table>
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" id="uname" required></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" id="pass" required></td>
+        </tr>
+        <tr>
+            <td>Member</td>
+            <td><select id="user">
+                    <option>Select</option>
+                    <option>User</option>
+                    <option>Admin</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="reset"></td>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

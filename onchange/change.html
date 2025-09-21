@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1() {
+            var name = document.getElementById("user").value;
+            alert(name)
+        }
+       
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Member</td>
+
+            <td>
+                <select id="user" onchange="fun1()">
+                    <option>select</option>
+                    <option>user</option>
+                    <option>admin</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <input type="text" onchange="console.log(this.value)">
+</body>
+
+</html>

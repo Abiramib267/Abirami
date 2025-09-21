@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Fun1() {
+        document.getElementById("uname").style.backgroundColor = "green";
+        document.getElementById("uname").style.color = "white";
+    }
+
+    function Fun2() {
+        document.getElementById("pass").style.backgroundColor = "green";
+        document.getElementById("pass").style.color = "white";
+    }
+
+    function Fun3() {
+        document.getElementById("email").style.backgroundColor = "green";
+        document.getElementById("email").style.color = "white";
+    }
+
+    function Fun4() {
+        document.getElementById("mobile").style.backgroundColor = "green";
+        document.getElementById("mobile").style.color = "white";
+    }
+   </script>
+
+<body>
+    <div>
+        <form action="">
+            <table>
+                <tr>
+                    <td>UserName:</td>
+                    <td><input type="text" id="uname" onfocus="Fun1()"></td>
+                    <td><input type="text" id="pass" onfocus="Fun2()" onmouseleave="Fun4()" required></td>
+                </tr>
+                <tr>
+                    <td><input type="reset"></td>
+                    <td><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+</body>
+
+</html>

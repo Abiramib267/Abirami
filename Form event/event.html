@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    1. onclick:
+    <button id="toggleBtn">Switch Theme</button><br><br>
+
+    2. onsubmit:
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Enter name">
+        <button type="submit">Submit</button>
+    </form><br>
+
+    3. onchange
+    <label>Pick a color:</label>
+    <input type="color" id="colorPicker" onchange="changeColor(this.value)">
+    <p id="preview">Color Preview</p><br>
+
+     4.onfocus
+    <input type="text" onfocus="this.style.border='2px soild blue'" onblur="this .style.border='1px solid green'"><br><br>
+
+    5.onblur
+    <input type="email" id="email" placeholder="Enter email" onblur="validateEmail()">
+    <p id="msg"></p>
+
+
+    <script>
+        // 1. onclick
+        let dark = false;
+        document.getElementById("toggleBtn").onclick = function () {
+            if (!dark) {
+                document.body.style.background = "black";
+                document.body.style.color = "white";
+                this.innerText = "Switch to Light Mode";
+            } else {
+                document.body.style.background = "white";
+                document.body.style.color = "black";
+                this.innerText = "Switch to Dark Mode";
+            }
+            dark = !dark;
+        };
+
+        // 2. onsubmit
+        document.getElementById("myForm").onsubmit = function (event) {
+            let name = document.getElementById("name").value;
+            if (name.trim() === "") {
+                alert("Name cannot be empty!");
+                event.preventDefault();
+            } else {
+                alert("Form Submitted Successfully!");
+            }
+        };
+
+        // 3. onchange
+        function changeColor(color) {
+            document.getElementById("preview").style.color = color;
+        }
+     
+        // 5. onblur
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let msg = document.getElementById("msg");
+            if (!email.includes("@") || !email.includes(".")) {
+                msg.innerText = "Invalid Email!";
+                msg.style.color = "red";
+            } else {
+                msg.innerText = "Valid Email!";
+                msg.style.color = "green";
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
