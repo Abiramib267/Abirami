@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <link rel="stylesheet" href="card.css">       
+    <script>
+        function description(id) {
+            let para = document.getElementById(id);
+            if (para.style.display === "none") {
+                para.style.display = "block";
+            } else {
+                para.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="./asset/Saree.jpg" alt="Saree">
+            <h4>Product: Saree</h4>
+            <h5>Price: ₹1000</h5>
+            <p id="desc1" class="descrip">
+                Border Design: Intricately woven gold borders run along the edges, featuring traditional motifs.<br>
+            </p>
+            <button onclick="description('desc1')">New more</button>
+        </div>
+
+        <div class="card">
+            <img src="./asset/Maroon Gown.jpg" alt="Maroon Gown">
+            <h4>Product: Red Gown</h4>
+            <h5>Price: ₹1500</h5>
+            <p id="desc2" class="descrip">
+                Fabric: Net and satin or georgette for structure and flow.<br>
+                Style: Western elegance with traditional undertones.
+            </p>
+            <button onclick="description('desc2')">New more</button>
+        </div>
+
+        <div class="card">
+            <img src="./asset/Yellow Gown.jpg" alt="Yellow Gown">
+            <h4>Product: Yellow Gown</h4>
+            <h5>Price: ₹2500</h5>
+            <p id="desc3" class="descrip">
+                Fabric: Satin or silk-blend with a shiny finish.<br>
+                Design: One-shoulder with floral embellishment.
+            </p>
+            <button onclick="description('desc3')">New more</button>
+        </div>
+
+        <div class="card">
+            <img src="./asset/Blue Gown.jpg" alt="Blue Gown">
+            <h4>Product: Blue Gown</h4>
+            <h5>Price: ₹2000</h5>
+            <p id="desc4" class="descrip">
+                Fabric: Chiffon or georgette skirt with lace neckline.<br>
+                Belt: Light-colored belt for waist definition.
+            </p>
+            <button onclick="description('desc4')">New more</button>
+        </div>
+    </div>
+</body>
+
+</html>
